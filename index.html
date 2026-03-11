@@ -1,56 +1,427 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/test/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/creative-test/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/test/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/test/assets/styles-X9THPhCB.css">
+    <script type="module" crossorigin src="/creative-test/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/creative-test/assets/index-9oVRcemk.css">
   </head>
   <body>
+    <div class="page-noise"></div>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span class="logo-mark"></span>
+            Velora Capital
+        </a>
 
+        <nav class="nav">
+            <a href="#about">О платформе</a>
+            <a href="#advantages">Преимущества</a>
+            <a href="#steps">Как это работает</a>
+            <a href="#reviews">Отзывы</a>
+        </nav>
+
+        <a href="#lead" class="btn btn-nav pulse-soft">Получить доступ</a>
+    </div>
+</header>
 
     <main>
       <!-- Loads the specified .html file -->
-      
+      <main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <div class="badge">
+                    Private Access • Premium сопровождение
+                </div>
+
+                <h1 class="hero-title">
+                    Новый уровень работы
+                    <span>с платформой и личным сопровождением</span>
+                </h1>
+
+                <p class="hero-text">
+                    Для клиентов, которым важны понятные шаги, уверенный старт и персональная
+                    поддержка с первых минут после обращения.
+                </p>
+
+                <div class="hero-list">
+                    <div class="hero-list-item">
+                        <span class="check"></span>
+                        Персональный специалист после заявки
+                    </div>
+                    <div class="hero-list-item">
+                        <span class="check"></span>
+                        Простой onboarding без перегруза
+                    </div>
+                    <div class="hero-list-item">
+                        <span class="check"></span>
+                        Поддержка на каждом этапе подключения
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#lead" class="btn btn-primary pulse-btn">Оставить заявку</a>
+                    <a href="#about" class="btn btn-secondary">Узнать подробнее</a>
+                </div>
+
+                <div class="hero-note">
+                    Консультация бесплатна • Ответ в ближайшее время • Конфиденциальная обработка данных
+                </div>
+            </div>
+
+            <div class="hero-visual reveal delay-1">
+                <div class="dashboard-card">
+                    <div class="dashboard-top">
+                        <div class="dashboard-status">
+                            <span class="status-dot"></span>
+                            Private onboarding
+                        </div>
+                        <div class="dashboard-chip">Premium flow</div>
+                    </div>
+
+                    <div class="dashboard-main">
+                        <p class="dashboard-label">Формат старта</p>
+                        <h2>Личный контакт. Понятные шаги. Быстрый вход.</h2>
+                        <p class="dashboard-copy">
+                            После заявки клиент получает сопровождение специалиста и чёткий сценарий дальнейших
+                            действий.
+                        </p>
+                    </div>
+
+                    <div class="metrics">
+                        <div class="metric-card">
+                            <span>01</span>
+                            <p>Заявка на консультацию</p>
+                        </div>
+                        <div class="metric-card">
+                            <span>02</span>
+                            <p>Связь с менеджером</p>
+                        </div>
+                        <div class="metric-card">
+                            <span>03</span>
+                            <p>Подключение к платформе</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-bottom">
+                        <div>
+                            <p class="small-label">Следующий шаг</p>
+                            <strong>Открыть персональный доступ</strong>
+                        </div>
+                        <a href="#lead" class="mini-cta">Перейти</a>
+                    </div>
+                </div>
+
+                <div class="floating-card floating-card-1">
+                    <span>Личное сопровождение</span>
+                </div>
+
+                <div class="floating-card floating-card-2">
+                    <span>Конфиденциальный onboarding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-strip reveal">
+        <div class="container trust-strip-inner">
+            <div class="trust-item">Премиальная подача</div>
+            <div class="trust-item">Один понятный CTA</div>
+            <div class="trust-item">Поддержка специалиста</div>
+            <div class="trust-item">Фокус на заявке</div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-kicker">О платформе</p>
+                <h2>Решение для тех, кто ценит уверенность, комфорт и сопровождение</h2>
+                <p>
+                    Мы выстроили путь клиента так, чтобы он не терялся в деталях,
+                    а сразу понимал, что его ждёт после обращения и кто будет сопровождать его дальше.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <article class="info-card reveal">
+                    <div class="info-number">01</div>
+                    <h3>Понятный старт</h3>
+                    <p>
+                        Пользователь попадает в понятную структуру без лишнего шума и хаотичных шагов.
+                    </p>
+                </article>
+
+                <article class="info-card reveal delay-1">
+                    <div class="info-number">02</div>
+                    <h3>Личный специалист</h3>
+                    <p>
+                        После заявки клиенту помогает человек, который ведёт его дальше и отвечает на вопросы.
+                    </p>
+                </article>
+
+                <article class="info-card reveal delay-2">
+                    <div class="info-number">03</div>
+                    <h3>Комфортный вход</h3>
+                    <p>
+                        Взаимодействие построено так, чтобы клиент чувствовал доверие с первого касания.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="advantages">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-kicker">Преимущества</p>
+                <h2>Почему такой формат сильнее работает с холодным трафиком</h2>
+            </div>
+
+            <div class="advantages-grid">
+                <article class="adv-card reveal">
+                    <div class="adv-icon"></div>
+                    <h3>Высокий уровень доверия</h3>
+                    <p>
+                        Premium-визуал и спокойная подача усиливают восприятие ценности предложения.
+                    </p>
+                </article>
+
+                <article class="adv-card reveal delay-1">
+                    <div class="adv-icon"></div>
+                    <h3>Минимум внутреннего сопротивления</h3>
+                    <p>
+                        Человеку легко сделать первый шаг, когда следующий этап прозрачен и понятен.
+                    </p>
+                </article>
+
+                <article class="adv-card reveal delay-2">
+                    <div class="adv-icon"></div>
+                    <h3>Ощущение личного контакта</h3>
+                    <p>
+                        Пользователь видит не просто форму, а вход в персонализированный процесс.
+                    </p>
+                </article>
+
+                <article class="adv-card reveal delay-3">
+                    <div class="adv-icon"></div>
+                    <h3>Чистая фокусировка на действии</h3>
+                    <p>
+                        На странице нет лишней навигации и перегруза — внимание ведётся к заявке.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="steps">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-kicker">Как это работает</p>
+                <h2>Путь клиента от первого касания до личного контакта</h2>
+            </div>
+
+            <div class="steps-grid">
+                <article class="step-card reveal">
+                    <div class="step-num">1</div>
+                    <h3>Переход с рекламы</h3>
+                    <p>
+                        Пользователь видит креатив и попадает на страницу с сильной, понятной подачей.
+                    </p>
+                </article>
+
+                <article class="step-card reveal delay-1">
+                    <div class="step-num">2</div>
+                    <h3>Изучение предложения</h3>
+                    <p>
+                        За несколько секунд он понимает формат взаимодействия и следующую выгоду.
+                    </p>
+                </article>
+
+                <article class="step-card reveal delay-2">
+                    <div class="step-num">3</div>
+                    <h3>Оставляет контакты</h3>
+                    <p>
+                        Короткая форма и премиальный визуал снижают барьер перед заявкой.
+                    </p>
+                </article>
+
+                <article class="step-card reveal delay-3">
+                    <div class="step-num">4</div>
+                    <h3>Получает сопровождение</h3>
+                    <p>
+                        После обращения с клиентом связывается специалист и проводит по следующим шагам.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <strong>Premium UX</strong>
+                    <p>Визуал, который усиливает ценность продукта</p>
+                </div>
+                <div class="stat-card reveal delay-1">
+                    <strong>Clear Journey</strong>
+                    <p>Понятный путь без хаоса и перегруза</p>
+                </div>
+                <div class="stat-card reveal delay-2">
+                    <strong>Single Goal</strong>
+                    <p>Один главный сценарий — привести клиента к заявке</p>
+                </div>
+                <div class="stat-card reveal delay-3">
+                    <strong>Human Touch</strong>
+                    <p>Коммуникация не выглядит безличной</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="reviews">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-kicker">Отзывы</p>
+                <h2>Когда подача вызывает доверие, решение принимается быстрее</h2>
+            </div>
+
+            <div class="reviews-grid">
+                <article class="review-card reveal">
+                    <p>
+                        “Сильнее всего зацепило, что всё выглядит дорого и спокойно.
+                        Нет ощущения давления, зато сразу понятно, куда двигаться дальше.”
+                    </p>
+                    <div class="review-meta">
+                        <strong>Андрей</strong>
+                        <span>Клиент</span>
+                    </div>
+                </article>
+
+                <article class="review-card reveal delay-1">
+                    <p>
+                        “Понравился формат: сначала видишь ценность, потом уже оставляешь контакты.
+                        Это вызывает больше доверия.”
+                    </p>
+                    <div class="review-meta">
+                        <strong>Марина</strong>
+                        <span>Клиент</span>
+                    </div>
+                </article>
+
+                <article class="review-card reveal delay-2">
+                    <p>
+                        “Сразу почувствовал, что после заявки не останусь один.
+                        Именно это и подтолкнуло оставить данные.”
+                    </p>
+                    <div class="review-meta">
+                        <strong>Дмитрий</strong>
+                        <span>Клиент</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="section-kicker">FAQ</p>
+                <h2>Частые вопросы перед первым шагом</h2>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item reveal">
+                    <summary>Что произойдёт после отправки заявки?</summary>
+                    <p>
+                        С вами свяжется специалист, уточнит удобный формат коммуникации и объяснит дальнейшие шаги.
+                    </p>
+                </details>
+
+                <details class="faq-item reveal delay-1">
+                    <summary>Сколько времени занимает оформление заявки?</summary>
+                    <p>
+                        Обычно не больше минуты. Мы оставили только самые важные поля.
+                    </p>
+                </details>
+
+                <details class="faq-item reveal delay-2">
+                    <summary>Подходит ли платформа новичкам?</summary>
+                    <p>
+                        Да, потому что после обращения клиент получает сопровождение и понятный onboarding.
+                    </p>
+                </details>
+
+                <details class="faq-item reveal delay-3">
+                    <summary>Можно ли задать вопросы до начала работы?</summary>
+                    <p>
+                        Да. Персональная консультация и нужна для того, чтобы клиент получил ясность до следующего шага.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="section lead-section" id="lead">
+        <div class="container lead-grid">
+            <div class="lead-copy reveal">
+                <p class="section-kicker">Персональный доступ</p>
+                <h2>Оставьте заявку и получите личную консультацию</h2>
+                <p>
+                    Мы свяжемся с вами, объясним формат работы и подскажем,
+                    как пройти первые шаги комфортно и уверенно.
+                </p>
+
+                <ul class="lead-benefits">
+                    <li>Быстрый ответ после заявки</li>
+                    <li>Личное сопровождение специалиста</li>
+                    <li>Понятный следующий шаг без лишней информации</li>
+                </ul>
+            </div>
+
+            <div class="form-card reveal delay-1">
+                <form id="lead-form" class="lead-form">
+                    <label class="field">
+                        <span>Ваше имя</span>
+                        <input type="text" name="name" placeholder="Введите имя" required />
+                    </label>
+
+                    <label class="field">
+                        <span>Телефон / Telegram</span>
+                        <input type="text" name="contact" placeholder="Введите контакт" required />
+                    </label>
+
+                    <label class="field">
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="Введите email" />
+                    </label>
+
+                    <button type="submit" class="btn btn-primary btn-full pulse-btn">
+                        Получить консультацию
+                    </button>
+
+                    <p class="form-note">
+                        Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.
+                    </p>
+
+                    <p class="success-message" id="success-message" hidden>
+                        Спасибо. Ваша заявка отправлена.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+
     </main>
 
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
-  </div>
-</footer>
-
+    <a href="#lead" class="mobile-sticky-cta pulse-btn">Оставить заявку</a>
 
   </body>
 </html>
