@@ -981,3 +981,117 @@ img {
     line-height: 1.08;
   }
 }
+/* контейнер инпута */
+.iti {
+  width: 100%;
+}
+
+/* сам input */
+.iti input,
+.iti input[type="tel"] {
+  width: 100%;
+  height: 56px;
+  padding-left: 96px;
+  padding-right: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.iti input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.iti input:focus {
+  border-color: #4fd1ff;
+  box-shadow: 0 0 0 4px rgba(79, 209, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* кнопка с флагом */
+.iti__selected-country {
+  padding: 0 12px 0 14px;
+  border-radius: 18px 0 0 18px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.iti__selected-country:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* стрелка */
+.iti__arrow {
+  border-top-color: #9fc7ff;
+}
+
+/* выпадающий список */
+.iti__dropdown-content {
+  background: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* поиск */
+.iti__search-input {
+  height: 44px;
+  padding: 10px 14px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #101a2c;
+  color: #fff;
+  outline: none;
+}
+
+.iti__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* страна */
+.iti__country {
+  padding: 10px 14px;
+  color: #e8eefc;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* hover по стране */
+.iti__country:hover {
+  background: rgba(79, 209, 255, 0.1);
+}
+
+/* активная / выделенная */
+.iti__country.iti__highlight {
+  background: linear-gradient(90deg, rgba(79, 209, 255, 0.16) 0%, rgba(129, 140, 248, 0.14) 100%);
+  color: #fff;
+}
+
+/* код страны */
+.iti__dial-code {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* полоса прокрутки */
+.iti__dropdown-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.iti__dropdown-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.iti__dropdown-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+}
+
+.iti__dropdown-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}

@@ -17,25 +17,40 @@ const observer = new IntersectionObserver(
 revealItems.forEach(item => observer.observe(item));
 
 document.addEventListener("DOMContentLoaded", () => {
+
   const form = document.getElementById("lead-form");
   const successMessage = document.getElementById("success-message");
   const phoneInput = document.querySelector("#phone");
 
   if (!form || !phoneInput || !successMessage) return;
 
+  /* ==========================
+      intl-tel-input
+  ========================== */
+
   const iti = window.intlTelInput(phoneInput, {
     initialCountry: "auto",
+
     geoIpLookup: callback => {
       fetch("https://ipapi.co/json")
         .then(res => res.json())
-        .then(data => callback(data.country_code?.toLowerCase() || "ua"))
-        .catch(() => callback("ua"));
+        .then(data => callback(data.country_code?.toLowerCase() || "uk"))
+        .catch(() => callback("uk"));
     },
-    preferredCountries: ["ua", "pl", "de"],
+
+    preferredCountries: ["uk", "pl", "de"],
     separateDialCode: true,
+
+    /* 🔹 добавляет поиск стран */
+    countrySearch: true,
+
     utilsScript:
       "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/utils.js",
   });
+
+  /* ==========================
+      FORM SUBMIT
+  ========================== */
 
   form.addEventListener("submit", e => {
     e.preventDefault();
@@ -64,10 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.reset();
     iti.setCountry("ua");
+
     successMessage.hidden = false;
 
     setTimeout(() => {
       successMessage.hidden = true;
     }, 5000);
   });
+
 });
