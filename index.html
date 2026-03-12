@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/creative-test/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/creative-test/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/creative-test/assets/index-9oVRcemk.css">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Velora Capital — пассивный доход | Легкий старт с проверенным партнером</title>
+  <meta name="description"
+    content="Velora Capital — пассивный доход с легким стартом и поддержкой проверенного партнера." />
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%234FD1FF'/%3E%3Cstop offset='60%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%231E3A8A'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23020617'/%3E%3Ccircle cx='32' cy='32' r='10' fill='url(%23g)'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/css/intlTelInput.css" />
+  <script type="module" crossorigin src="/creative-test/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/creative-test/assets/index-9oVRcemk.css">
+</head>
   <body>
     <div class="page-noise"></div>
     <header class="header">
@@ -384,36 +390,43 @@
                 </ul>
             </div>
 
-            <div class="form-card reveal delay-1">
-                <form id="lead-form" class="lead-form">
-                    <label class="field">
-                        <span>Ваше имя</span>
-                        <input type="text" name="name" placeholder="Введите имя" required />
-                    </label>
+<div class="form-card reveal delay-1">
+    <form id="lead-form" class="lead-form">
 
-                    <label class="field">
-                        <span>Телефон / Telegram</span>
-                        <input type="text" name="contact" placeholder="Введите контакт" required />
-                    </label>
+        <label class="field">
+            <span>Имя</span>
+            <input type="text" name="firstName" placeholder="Введите имя" required>
+        </label>
 
-                    <label class="field">
-                        <span>Email</span>
-                        <input type="email" name="email" placeholder="Введите email" />
-                    </label>
+        <label class="field">
+            <span>Фамилия</span>
+            <input type="text" name="lastName" placeholder="Введите фамилию" required>
+        </label>
 
-                    <button type="submit" class="btn btn-primary btn-full pulse-btn">
-                        Получить консультацию
-                    </button>
+        <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Введите email" required>
+        </label>
 
-                    <p class="form-note">
-                        Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.
-                    </p>
+        <label class="field">
+            <span>Телефон</span>
+            <input id="phone" type="tel" name="phone" placeholder="Введите телефон" required>
+        </label>
 
-                    <p class="success-message" id="success-message" hidden>
-                        Спасибо. Ваша заявка отправлена.
-                    </p>
-                </form>
-            </div>
+        <button type="submit" class="btn btn-primary btn-full pulse-btn">
+            Получить консультацию
+        </button>
+
+        <p class="form-note">
+            Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.
+        </p>
+
+        <p class="success-message" id="success-message" hidden>
+            Спасибо. Ваша заявка отправлена.
+        </p>
+
+    </form>
+</div>
         </div>
     </section>
 </main>
@@ -422,6 +435,6 @@
     </main>
 
     <a href="#lead" class="mobile-sticky-cta pulse-btn">Оставить заявку</a>
-
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/intlTelInput.min.js"></script>
   </body>
 </html>
