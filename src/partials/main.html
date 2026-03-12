@@ -352,36 +352,43 @@
                 </ul>
             </div>
 
-            <div class="form-card reveal delay-1">
-                <form id="lead-form" class="lead-form">
-                    <label class="field">
-                        <span>Ваше имя</span>
-                        <input type="text" name="name" placeholder="Введите имя" required />
-                    </label>
+<div class="form-card reveal delay-1">
+    <form id="lead-form" class="lead-form">
 
-                    <label class="field">
-                        <span>Телефон / Telegram</span>
-                        <input type="text" name="contact" placeholder="Введите контакт" required />
-                    </label>
+        <label class="field">
+            <span>Имя</span>
+            <input type="text" name="firstName" placeholder="Введите имя" required>
+        </label>
 
-                    <label class="field">
-                        <span>Email</span>
-                        <input type="email" name="email" placeholder="Введите email" />
-                    </label>
+        <label class="field">
+            <span>Фамилия</span>
+            <input type="text" name="lastName" placeholder="Введите фамилию" required>
+        </label>
 
-                    <button type="submit" class="btn btn-primary btn-full pulse-btn">
-                        Получить консультацию
-                    </button>
+        <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Введите email" required>
+        </label>
 
-                    <p class="form-note">
-                        Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.
-                    </p>
+        <label class="field">
+            <span>Телефон</span>
+            <input id="phone" type="tel" name="phone" placeholder="Введите телефон" required>
+        </label>
 
-                    <p class="success-message" id="success-message" hidden>
-                        Спасибо. Ваша заявка отправлена.
-                    </p>
-                </form>
-            </div>
+        <button type="submit" class="btn btn-primary btn-full pulse-btn">
+            Получить консультацию
+        </button>
+
+        <p class="form-note">
+            Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.
+        </p>
+
+        <p class="success-message" id="success-message" hidden>
+            Спасибо. Ваша заявка отправлена.
+        </p>
+
+    </form>
+</div>
         </div>
     </section>
 </main>

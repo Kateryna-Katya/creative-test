@@ -16,19 +16,43 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach(item => observer.observe(item));
 
-const form = document.getElementById("lead-form");
-const successMessage = document.getElementById("success-message");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("lead-form");
+  const successMessage = document.getElementById("success-message");
+  const phoneInput = document.querySelector("#phone");
 
-if (form) {
+  if (!form || !phoneInput || !successMessage) return;
+
+  const iti = window.intlTelInput(phoneInput, {
+    initialCountry: "auto",
+    geoIpLookup: callback => {
+      fetch("https://ipapi.co/json")
+        .then(res => res.json())
+        .then(data => callback(data.country_code?.toLowerCase() || "ua"))
+        .catch(() => callback("ua"));
+    },
+    preferredCountries: ["ua", "pl", "de"],
+    separateDialCode: true,
+    utilsScript:
+      "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/utils.js",
+  });
+
   form.addEventListener("submit", e => {
     e.preventDefault();
+
+    if (!iti.isValidNumber()) {
+      alert("Введите корректный номер телефона");
+      phoneInput.focus();
+      return;
+    }
 
     const formData = new FormData(form);
 
     const lead = {
-      name: formData.get("name"),
-      contact: formData.get("contact"),
-      email: formData.get("email"),
+      firstName: formData.get("firstName")?.trim(),
+      lastName: formData.get("lastName")?.trim(),
+      email: formData.get("email")?.trim(),
+      phone: iti.getNumber(),
       createdAt: new Date().toISOString(),
     };
 
@@ -36,11 +60,14 @@ if (form) {
     savedLeads.push(lead);
     localStorage.setItem("velora-leads", JSON.stringify(savedLeads));
 
+    console.log("Saved lead:", lead);
+
     form.reset();
+    iti.setCountry("ua");
     successMessage.hidden = false;
 
     setTimeout(() => {
       successMessage.hidden = true;
     }, 5000);
   });
-}
+});
